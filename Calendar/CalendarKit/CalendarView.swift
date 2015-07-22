@@ -66,7 +66,7 @@ public class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewD
     
   }
   
-  class func instance(baseDate: NSDate, selectedDate: NSDate) -> CalendarView {
+  public class func instance(baseDate: NSDate, selectedDate: NSDate) -> CalendarView {
     var calendarView = NSBundle.mainBundle().loadNibNamed("CalendarView", owner: nil, options: nil).first as! CalendarView
     calendarView.selectedDate = selectedDate
     calendarView.baseDate = baseDate
