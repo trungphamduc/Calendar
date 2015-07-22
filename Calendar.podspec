@@ -7,10 +7,10 @@
 #
 
 Pod::Spec.new do |s|
-  s.name         = "Calendar"
+  s.name         = "ASCalendar"
   s.version      = "0.1"
   s.summary      = "iOS calendar component written in Swift."
-  s.homepage     = "https://github.com/lancy98/Calendar"
+  s.homepage     = "https://github.com/trungphamduc/Calendar.git"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
   s.author             = { "Lancy Norbert Fernandes" => "lancy98@gmail.com" }
   s.platform     = :ios, "8.0"
