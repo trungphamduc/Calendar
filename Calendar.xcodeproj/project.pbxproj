@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		546EFFB51B5DEF38005BA77E /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EFFB41B5DEF38005BA77E /* Settings.swift */; };
+		546EFFB71B5DF5E0005BA77E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 546EFFB61B5DF5E0005BA77E /* UIColorExtension.swift */; };
 		B1F1071F1B1C80A70008D332 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F1071E1B1C80A70008D332 /* AppDelegate.swift */; };
 		B1F107211B1C80A70008D332 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1F107201B1C80A70008D332 /* ViewController.swift */; };
 		B1F107241B1C80A70008D332 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1F107221B1C80A70008D332 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		546EFFB41B5DEF38005BA77E /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		546EFFB61B5DF5E0005BA77E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		B1F107191B1C80A70008D332 /* Calendar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calendar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1F1071D1B1C80A70008D332 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B1F1071E1B1C80A70008D332 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +153,8 @@
 				B1FF26AA1B1EE79D00004E01 /* CalendarLogic.swift */,
 				B1FF26AD1B1EE79D00004E01 /* Date.swift */,
 				B1FF26B21B1EE79D00004E01 /* NSDateAdditions.swift */,
+				546EFFB41B5DEF38005BA77E /* Settings.swift */,
+				546EFFB61B5DF5E0005BA77E /* UIColorExtension.swift */,
 			);
 			path = CalendarKit;
 			sourceTree = "<group>";
@@ -261,9 +267,11 @@
 				B1FF26BB1B1EE79D00004E01 /* MonthCollectionCell.swift in Sources */,
 				B1F107211B1C80A70008D332 /* ViewController.swift in Sources */,
 				B1FF26B61B1EE79D00004E01 /* CalendarView.swift in Sources */,
+				546EFFB51B5DEF38005BA77E /* Settings.swift in Sources */,
 				B1FF26B91B1EE79D00004E01 /* DayCollectionCell.swift in Sources */,
 				B1FF26B81B1EE79D00004E01 /* Date.swift in Sources */,
 				B1FF26B51B1EE79D00004E01 /* CalendarLogic.swift in Sources */,
+				546EFFB71B5DF5E0005BA77E /* UIColorExtension.swift in Sources */,
 				B1F1071F1B1C80A70008D332 /* AppDelegate.swift in Sources */,
 				B1FF26BE1B1EE79D00004E01 /* WeekHeaderView.swift in Sources */,
 			);

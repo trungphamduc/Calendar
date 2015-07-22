@@ -9,52 +9,52 @@
 import Foundation
 
 class Date: Printable, Equatable {
+  
+  var day: Int
+  var month: Int
+  var year: Int
+  
+  var isToday: Bool {
+    let today = Date(date: NSDate())
+    return (isEqual(today) == .OrderedSame)
+  }
+  
+  func isEqual(date: Date) -> NSComparisonResult {
+    let selfComposite = (year * 10000) + (month * 100) + day
+    let otherComposite = (date.year * 10000) + (date.month * 100) + date.day
     
-    var day: Int
-    var month: Int
-    var year: Int
-    
-    var isToday: Bool {
-        let today = Date(date: NSDate())
-        return (isEqual(today) == .OrderedSame)
+    if selfComposite < otherComposite {
+      return .OrderedAscending
+    } else if selfComposite == otherComposite {
+      return .OrderedSame
+    } else {
+      return .OrderedDescending
     }
+  }
+  
+  init(day: Int, month: Int, year: Int) {
+    self.day = day
+    self.month = month
+    self.year = year
+  }
+  
+  init(date: NSDate) {
+    let part = date.monthDayAndYearComponents
     
-    func isEqual(date: Date) -> NSComparisonResult {
-        let selfComposite = (year * 10000) + (month * 100) + day
-        let otherComposite = (date.year * 10000) + (date.month * 100) + date.day
-        
-        if selfComposite < otherComposite {
-            return .OrderedAscending
-        } else if selfComposite == otherComposite {
-            return .OrderedSame
-        } else {
-            return .OrderedDescending
-        }
-    }
-    
-    init(day: Int, month: Int, year: Int) {
-        self.day = day
-        self.month = month
-        self.year = year
-    }
-    
-    init(date: NSDate) {
-        let part = date.monthDayAndYearComponents
-        
-        self.day = part.day
-        self.month = part.month
-        self.year = part.year
-    }
-    
-    var nsdate: NSDate {
-        return NSDate.date(day, month: month, year: year)
-    }
-    
-    var description: String {
-        return "\(day)-\(month)-\(year)"
-    }
+    self.day = part.day
+    self.month = part.month
+    self.year = part.year
+  }
+  
+  var nsdate: NSDate {
+    return NSDate.date(day, month: month, year: year)
+  }
+  
+  var description: String {
+    return "\(day)-\(month)-\(year)"
+  }
 }
 
 func ==(lhs: Date, rhs: Date) -> Bool {
-    return ((lhs.day == rhs.day) && (lhs.month == rhs.month) && (lhs.year == rhs.year))
+  return ((lhs.day == rhs.day) && (lhs.month == rhs.month) && (lhs.year == rhs.year))
 }

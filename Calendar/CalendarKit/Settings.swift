@@ -29,7 +29,7 @@ struct ASSettings {
 // default calendar settings
 var calendarSettings = ASSettings(
   monthFormat: "LLLL yyyy",
-  monthRange: 24,
+  monthRange: 12,
   dateSelectedImg: nil,
   weekBgColor: "#fff",
   weekFont: "Helvetica Neue",

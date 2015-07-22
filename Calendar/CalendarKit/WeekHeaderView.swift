@@ -9,19 +9,23 @@
 import UIKit
 
 class WeekHeaderView: UICollectionReusableView {
-
-    @IBOutlet var labels: [UILabel]!
-    
-    let formatter = NSDateFormatter()
-    
-    override func awakeFromNib() {
-        if labels.count == formatter.weekdaySymbols.count {
-            for var i = 0; i < formatter.weekdaySymbols.count; i++ {
-                let weekDayString = formatter.weekdaySymbols[i] as! String
-                
-                labels[i].text = weekDayString.substringToIndex(advance(weekDayString.startIndex, 3)).uppercaseString
-            }
-        }
+  
+  @IBOutlet var labels: [UILabel]!
+  
+  let formatter = NSDateFormatter()
+  
+  override func awakeFromNib() {
+    if labels.count == formatter.weekdaySymbols.count {
+      for var i = 0; i < formatter.weekdaySymbols.count; i++ {
+        let weekDayString = formatter.weekdaySymbols[i] as! String
+        
+        labels[i].text = weekDayString.substringToIndex(advance(weekDayString.startIndex, 3)).uppercaseString
+        labels[i].textColor = UIColor(rgba: calendarSettings.weekTxtColor)
+        labels[i].font = UIFont(name: calendarSettings.weekFont, size: calendarSettings.weekFontSize)
+        labels[i].backgroundColor = UIColor(rgba: calendarSettings.weekBgColor)
+        
+      }
     }
-    
+  }
+  
 }
