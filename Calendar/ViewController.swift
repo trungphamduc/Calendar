@@ -24,12 +24,12 @@ class ViewController: UIViewController, CalendarViewDelegate {
       monthRange: 24,
       dateSelectedImg: nil,
       weekBgColor: "#93d1e6",
-      weekFont: "OpenSans",
-      weekFontSize: 1,
+      weekFont: "Helvetica Neue",
+      weekFontSize: 10,
       weekTxtColor: "#fff",
       dateTxtColor: "#000",
-      dateFont: "OpenSans",
-      dateFontSize: 1,
+      dateFont: "Helvetica Neue",
+      dateFontSize: 15,
       dateAlpha: 0.4
     )
     
@@ -41,6 +41,12 @@ class ViewController: UIViewController, CalendarViewDelegate {
     calendarView.delegate = self
     calendarView.setTranslatesAutoresizingMaskIntoConstraints(false)
     placeholderView.addSubview(calendarView)
+    
+    // Custom calendar header
+    calendarView.headerView.backgroundColor = UIColor.redColor()
+    calendarView.monthYearLabel.backgroundColor = UIColor.redColor()
+    calendarView.nextButton.setTitle("", forState: UIControlState.Normal)
+    calendarView.previousButton.setTitle("", forState: UIControlState.Normal)
     
     // Constraints for calendar view - Fill the parent view.
     placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[calendarView]|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["calendarView": calendarView]))
