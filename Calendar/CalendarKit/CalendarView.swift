@@ -8,11 +8,11 @@
 
 import UIKit
 
-protocol CalendarViewDelegate: class {
+public protocol CalendarViewDelegate: class {
   func didSelectDate(date: NSDate)
 }
 
-class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, MonthCollectionCellDelegate {
+public class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, MonthCollectionCellDelegate {
   
   @IBOutlet weak var headerView: UIView!
   @IBOutlet var monthYearLabel: UILabel!
@@ -60,7 +60,7 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
   
   
   
-  override func awakeFromNib() {
+  public override func awakeFromNib() {
     let nib = UINib(nibName: "MonthCollectionCell", bundle: nil)
     self.collectionView.registerNib(nib, forCellWithReuseIdentifier: "MonthCollectionCell")
     
@@ -73,11 +73,11 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     return calendarView
   }
   
-  func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+  public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return collectionData.count
   }
   
-  func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+  public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("MonthCollectionCell", forIndexPath: indexPath) as! MonthCollectionCell
     
@@ -91,17 +91,17 @@ class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegate
     return cell
   }
   
-  func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+  public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
     return collectionView.frame.size
   }
   
-  func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+  public func scrollViewDidEndDragging(scrollView: UIScrollView, willDecelerate decelerate: Bool) {
     if (!decelerate) {
       updateHeader()
     }
   }
   
-  func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+  public func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
     updateHeader()
   }
   

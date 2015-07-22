@@ -8,7 +8,7 @@
 
 import UIKit
 
-struct ASSettings {
+public struct ASSettings {
   // header month-year formar
   var monthYearFormat: String
   // Month range of calendar
@@ -34,7 +34,7 @@ struct ASSettings {
 }
 
 // default calendar settings
-var calendarSettings = ASSettings(
+public var calendarSettings = ASSettings(
   monthYearFormat: "LLLL yyyy",
   monthRange: 12,
   dateSelectedImg: nil,
