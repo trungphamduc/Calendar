@@ -1,4 +1,4 @@
-# iOS calendar component writtern in swift
+# Swift calendar component
 Usage
 ========
 1. Drag the `CalendarKit`folder into your project. You will find this folder inside `Calendar`.
