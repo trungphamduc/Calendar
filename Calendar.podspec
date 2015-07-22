@@ -10,11 +10,11 @@ Pod::Spec.new do |s|
   s.name         = "ASCalendar"
   s.version      = "0.1"
   s.summary      = "iOS calendar component written in Swift."
-  s.homepage     = "https://github.com/trungphamduc/Calendar.git"
+  s.homepage     = "https://github.com/trungphamduc/Calendar"
   s.license      = { :type => "MIT", :file => "LICENSE.md" }
   s.author             = { "Lancy Norbert Fernandes" => "lancy98@gmail.com" }
   s.platform     = :ios, "8.0"
-  s.source       = { :git => "https://github.com/lancy98/Calendar.git", :tag => "0.1" }
+  s.source       = { :git => "https://github.com/trungphamduc/Calendar.git", :tag => "0.1" }
   s.source_files  = 'Calendar/CalendarKit'
   s.resources = 'Calendar/CalendarKit/*.xib'
   s.requires_arc = true
