@@ -1,7 +1,7 @@
 # Swift calendar component
 Usage
 ========
-1. Drag the `CalendarKit`folder into your project. You will find this folder inside `Calendar`.
+1. Install Calendar pod
 2. You can add the calendar to a placeholder view, so create an outlet for it.
 <pre lang="Swift">
 @IBOutlet var placeholderView: UIView!
