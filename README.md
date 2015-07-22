@@ -13,6 +13,21 @@ override func viewDidLoad() {
         
         // todays date.
         let date = NSDate()
+    
+        // Override calendar settings default
+        calendarSettings = ASSettings(
+          monthYearFormat: "LLLL yyyy",
+          monthRange: 24,
+          dateSelectedImg: nil,
+          weekBgColor: "#93d1e6",
+          weekFont: "OpenSans",
+          weekFontSize: 11,
+          weekTxtColor: "#fff",
+          dateTxtColor: "#000",
+          dateFont: "OpenSans",
+          dateFontSize: 15,
+          dateAlpha: 0.4
+        )
         
         // create an instance of calendar view with 
         // base date (Calendar shows 12 months range from current base date)
@@ -21,6 +36,12 @@ override func viewDidLoad() {
         calendarView.delegate = self
         calendarView.setTranslatesAutoresizingMaskIntoConstraints(false)
         placeholderView.addSubview(calendarView)
+
+        // Pulbic calendar header - Custom UI of calendar header
+        calendarView.headerView.backgroundColor = UIColor.redColor()
+        calendarView.monthYearLabel.backgroundColor = UIColor.redColor()
+        calendarView.nextButton.setTitle("", forState: UIControlState.Normal)
+        calendarView.previousButton.setTitle("", forState: UIControlState.Normal)
         
         // Constraints for calendar view - Fill the parent view.
         placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[calendarView]|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["calendarView": calendarView]))
