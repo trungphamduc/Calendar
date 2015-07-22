@@ -14,12 +14,12 @@ public protocol CalendarViewDelegate: class {
 
 public class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, MonthCollectionCellDelegate {
   
-  @IBOutlet weak var headerView: UIView!
-  @IBOutlet var monthYearLabel: UILabel!
-  @IBOutlet var collectionView: UICollectionView!
-  @IBOutlet var nextButton: UIButton!
-  @IBOutlet var previousButton: UIButton!
-  weak var delegate: CalendarViewDelegate?
+  @IBOutlet weak public var headerView: UIView!
+  @IBOutlet public var monthYearLabel: UILabel!
+  @IBOutlet public var collectionView: UICollectionView!
+  @IBOutlet public var nextButton: UIButton!
+  @IBOutlet public var previousButton: UIButton!
+  weak public var delegate: CalendarViewDelegate?
   
   private var collectionData = [CalendarLogic]()
   var baseDate: NSDate? {
