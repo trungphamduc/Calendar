@@ -9,18 +9,25 @@
 import UIKit
 
 struct ASSettings {
-  var monthFormat: String
+  // header month-year formar
+  var monthYearFormat: String
+  // Month range of calendar
   var monthRange: Int
+  // date selected image
   var dateSelectedImg: UIImage?
   
+  // Week config UI
   var weekBgColor: String
   var weekFont: String
   var weekFontSize: CGFloat
   var weekTxtColor: String
   
+  // Date config UI
   var dateTxtColor: String
   var dateFont: String
   var dateFontSize: CGFloat
+  
+  // Alpla for disabled date
   var dateAlpha: CGFloat
   
   
@@ -28,7 +35,7 @@ struct ASSettings {
 
 // default calendar settings
 var calendarSettings = ASSettings(
-  monthFormat: "LLLL yyyy",
+  monthYearFormat: "LLLL yyyy",
   monthRange: 12,
   dateSelectedImg: nil,
   weekBgColor: "#fff",

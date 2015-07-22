@@ -24,7 +24,7 @@ class CalendarLogic: Hashable {
   private lazy var dateFormatter = NSDateFormatter()
   
   var currentMonthAndYear: NSString {
-    dateFormatter.dateFormat = calendarSettings.monthFormat
+    dateFormatter.dateFormat = calendarSettings.monthYearFormat
     return dateFormatter.stringFromDate(baseDate)
   }
   
