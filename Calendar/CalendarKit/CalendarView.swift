@@ -13,8 +13,8 @@ protocol CalendarViewDelegate: class {
 }
 
 class CalendarView: UIView, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, MonthCollectionCellDelegate {
-  @IBOutlet weak var headerView: UIView!
   
+  @IBOutlet weak var headerView: UIView!
   @IBOutlet var monthYearLabel: UILabel!
   @IBOutlet var collectionView: UICollectionView!
   @IBOutlet var nextButton: UIButton!
