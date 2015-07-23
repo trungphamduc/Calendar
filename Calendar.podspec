@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "8.0"
   s.source       = { :git => "https://github.com/trungphamduc/Calendar.git", :tag => "0.1" }
   s.source_files  = 'Calendar/CalendarKit'
-  s.resources = 'Calendar/CalendarKit/*.xib'
+  s.resources = 'ASCalendar/CalendarKit/*.xib'
   s.requires_arc = true
 end
