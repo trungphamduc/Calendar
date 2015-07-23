@@ -1,0 +1,14 @@
+PODS:
+  - ASCalendar (0.1.0)
+
+DEPENDENCIES:
+  - ASCalendar (from `../`)
+
+EXTERNAL SOURCES:
+  ASCalendar:
+    :path: ../
+
+SPEC CHECKSUMS:
+  ASCalendar: bb5d80f6f0eeeb3964de638807f20df4fe6b578c
+
+COCOAPODS: 0.37.2

@@ -1,7 +1,7 @@
 # Swift calendar component
 Usage
 ========
-1. Install Calendar pod
+1. Install ASCalendar pod
 2. You can add the calendar to a placeholder view, so create an outlet for it.
 <pre lang="Swift">
 @IBOutlet var placeholderView: UIView!
@@ -50,15 +50,12 @@ override func viewDidLoad() {
 </pre>
 4. Implement the delegate method
 <pre lang="Swift">
-func didSelectDate(date: NSDate) {
+		func didSelectDate(date: NSDate) {
         println("\(date.year)-\(date.month)-\(date.day)")
     }
 </pre>
 Make sure your `Viewcontroller` class conforms to `CalendarViewDelegate` protocol.
 
-Screenshot
-========
-<center>![](etc/screenshot.png)</center>
 
 License
 ========
