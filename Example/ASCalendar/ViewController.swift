@@ -25,12 +25,13 @@ class ViewController: UIViewController {
         monthYearFormat: "LLLL yyyy",
         monthRange: 24,
         dateSelectedImg: nil,
+        weekHeaderHeight: 20,
         weekBgColor: "#93d1e6",
-        weekFont: "OpenSans",
-        weekFontSize: 11,
+        weekFont: "Helvetica Neue",
+        weekFontSize: 10,
         weekTxtColor: "#fff",
         dateTxtColor: "#000",
-        dateFont: "OpenSans",
+        dateFont: "Helvetica Neue",
         dateFontSize: 15,
         dateAlpha: 0.4
       )

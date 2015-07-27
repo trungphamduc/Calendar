@@ -17,6 +17,7 @@ public struct ASSettings {
   public var dateSelectedImg: UIImage?
   
   // Week config UI
+  public var weekHeaderHeight: CGFloat
   public var weekBgColor: String
   public var weekFont: String
   public var weekFontSize: CGFloat
@@ -30,10 +31,11 @@ public struct ASSettings {
   // Alpla for disabled date
   public var dateAlpha: CGFloat
   
-  public init(monthYearFormat: String, monthRange: Int, dateSelectedImg: UIImage?, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
+  public init(monthYearFormat: String, monthRange: Int, dateSelectedImg: UIImage?, weekHeaderHeight: CGFloat, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
     self.monthYearFormat = monthYearFormat
     self.monthRange = monthRange
     self.dateSelectedImg = dateSelectedImg
+    self.weekHeaderHeight = weekHeaderHeight
     self.weekBgColor = weekBgColor
     self.weekFont = weekFont
     self.weekFontSize = weekFontSize
@@ -51,6 +53,7 @@ public var calendarSettings = ASSettings(
   monthYearFormat: "LLLL yyyy",
   monthRange: 12,
   dateSelectedImg: nil,
+  weekHeaderHeight: 35,
   weekBgColor: "#fff",
   weekFont: "Helvetica Neue",
   weekFontSize: 11,

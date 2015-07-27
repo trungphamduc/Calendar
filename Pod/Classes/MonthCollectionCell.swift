@@ -72,7 +72,7 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
   
   func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     // 7*6 = 42 :- 7 columns (7 days in a week) and 6 rows (max 6 weeks in a month)
-    return 42
+    return 7*6
   }
   
   func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -102,10 +102,10 @@ class MonthCollectionCell: UICollectionViewCell, UICollectionViewDataSource, UIC
   }
   
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
-    return CGSizeMake(collectionView.frame.width/7.0, collectionView.frame.height/7.0)
+    return CGSizeMake(collectionView.frame.width/7.0, (collectionView.frame.height - calendarSettings.weekHeaderHeight)/6)
   }
   
   func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-    return CGSizeMake(collectionView.frame.width, collectionView.frame.height/7.0)
+    return CGSizeMake(collectionView.frame.width, calendarSettings.weekHeaderHeight)
   }
 }
