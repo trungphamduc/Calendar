@@ -19,6 +19,7 @@ override func viewDidLoad() {
           monthYearFormat: "LLLL yyyy",
           monthRange: 24,
           dateSelectedImg: nil,
+          weekHeaderHeight: 20,
           weekBgColor: "#93d1e6",
           weekFont: "OpenSans",
           weekFontSize: 11,
