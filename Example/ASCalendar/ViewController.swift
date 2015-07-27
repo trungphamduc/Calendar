@@ -31,6 +31,7 @@ class ViewController: UIViewController {
         weekFontSize: 10,
         weekTxtColor: "#fff",
         dateTxtColor: "#000",
+        selectedDateTxtColor: "#fff",
         dateFont: "Helvetica Neue",
         dateFontSize: 15,
         dateAlpha: 0.4
@@ -50,8 +51,7 @@ class ViewController: UIViewController {
       calendarView.monthYearLabel.backgroundColor = UIColor.redColor()
       calendarView.nextButton.setTitle("", forState: UIControlState.Normal)
       calendarView.previousButton.setTitle("", forState: UIControlState.Normal)
-
-
+      
       // Constraints for calendar view - Fill the parent view.
       placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("H:|[calendarView]|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["calendarView": calendarView]))
       placeholderView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[calendarView]|", options: NSLayoutFormatOptions(0), metrics: nil, views: ["calendarView": calendarView]))

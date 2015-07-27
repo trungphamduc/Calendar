@@ -25,6 +25,7 @@ override func viewDidLoad() {
           weekFontSize: 11,
           weekTxtColor: "#fff",
           dateTxtColor: "#000",
+          selectedDateTxtColor: "#fff",
           dateFont: "OpenSans",
           dateFontSize: 15,
           dateAlpha: 0.4
