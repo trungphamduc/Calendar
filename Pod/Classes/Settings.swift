@@ -25,13 +25,14 @@ public struct ASSettings {
   
   // Date config UI
   public var dateTxtColor: String
+  public var selectedDateTxtColor: String
   public var dateFont: String
   public var dateFontSize: CGFloat
   
   // Alpla for disabled date
   public var dateAlpha: CGFloat
   
-  public init(monthYearFormat: String, monthRange: Int, dateSelectedImg: UIImage?, weekHeaderHeight: CGFloat, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
+  public init(monthYearFormat: String, monthRange: Int, dateSelectedImg: UIImage?, weekHeaderHeight: CGFloat, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, selectedDateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
     self.monthYearFormat = monthYearFormat
     self.monthRange = monthRange
     self.dateSelectedImg = dateSelectedImg
@@ -41,6 +42,7 @@ public struct ASSettings {
     self.weekFontSize = weekFontSize
     self.weekTxtColor = weekTxtColor
     self.dateTxtColor = dateTxtColor
+    self.selectedDateTxtColor = selectedDateTxtColor
     self.dateFont = dateFont
     self.dateFontSize = dateFontSize
     self.dateAlpha = dateAlpha
@@ -59,6 +61,7 @@ public var calendarSettings = ASSettings(
   weekFontSize: 11,
   weekTxtColor: "#000",
   dateTxtColor: "#000",
+  selectedDateTxtColor: "#fff",
   dateFont: "Helvetica Neue",
   dateFontSize: 15,
   dateAlpha: 0.4
