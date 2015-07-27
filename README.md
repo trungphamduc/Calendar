@@ -17,6 +17,7 @@ override func viewDidLoad() {
         // Override calendar settings default
         calendarSettings = ASSettings(
           monthYearFormat: "LLLL yyyy",
+          monthYearTextUppercase: false,
           monthRange: 24,
           dateSelectedImg: nil,
           weekHeaderHeight: 20,

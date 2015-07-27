@@ -23,6 +23,7 @@ class ViewController: UIViewController {
       // Override calendar settings default
       calendarSettings = ASSettings(
         monthYearFormat: "LLLL yyyy",
+        monthYearTextUppercase: true,
         monthRange: 24,
         dateSelectedImg: nil,
         weekHeaderHeight: 20,

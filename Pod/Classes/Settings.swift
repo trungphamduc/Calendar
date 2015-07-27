@@ -11,6 +11,7 @@ import UIKit
 public struct ASSettings {
   // header month-year formar
   public var monthYearFormat: String
+  public var monthYearTextUppercase: Bool
   // Month range of calendar
   public var monthRange: Int
   // date selected image
@@ -32,8 +33,9 @@ public struct ASSettings {
   // Alpla for disabled date
   public var dateAlpha: CGFloat
   
-  public init(monthYearFormat: String, monthRange: Int, dateSelectedImg: UIImage?, weekHeaderHeight: CGFloat, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, selectedDateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
+  public init(monthYearFormat: String, monthYearTextUppercase: Bool, monthRange: Int, dateSelectedImg: UIImage?, weekHeaderHeight: CGFloat, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, selectedDateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
     self.monthYearFormat = monthYearFormat
+    self.monthYearTextUppercase = monthYearTextUppercase
     self.monthRange = monthRange
     self.dateSelectedImg = dateSelectedImg
     self.weekHeaderHeight = weekHeaderHeight
@@ -53,6 +55,7 @@ public struct ASSettings {
 // default calendar settings
 public var calendarSettings = ASSettings(
   monthYearFormat: "LLLL yyyy",
+  monthYearTextUppercase: false,
   monthRange: 12,
   dateSelectedImg: nil,
   weekHeaderHeight: 35,

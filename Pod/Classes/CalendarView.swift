@@ -107,7 +107,11 @@ public class CalendarView: UIView {
   func updateHeader(pageNumber: Int) {
     if collectionData.count > pageNumber {
       let logic = collectionData[pageNumber]
-      monthYearLabel?.text = logic.currentMonthAndYear as String
+      if (calendarSettings.monthYearTextUppercase) {
+        monthYearLabel?.text = logic.currentMonthAndYear.uppercaseString as String
+      } else {
+        monthYearLabel?.text = logic.currentMonthAndYear as String
+      }
     }
   }
   
