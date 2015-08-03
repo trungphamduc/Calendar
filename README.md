@@ -20,6 +20,7 @@ override func viewDidLoad() {
           monthYearTextUppercase: false,
           monthRange: 24,
           dateSelectedImg: nil,
+          disableTouchOnPastDate: true,
           weekHeaderHeight: 20,
           weekBgColor: "#93d1e6",
           weekFont: "OpenSans",
