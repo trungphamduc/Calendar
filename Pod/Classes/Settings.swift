@@ -16,6 +16,7 @@ public struct ASSettings {
   public var monthRange: Int
   // date selected image
   public var dateSelectedImg: UIImage?
+  public var disableTouchOnPastDate: Bool
   
   // Week config UI
   public var weekHeaderHeight: CGFloat
@@ -33,11 +34,12 @@ public struct ASSettings {
   // Alpla for disabled date
   public var dateAlpha: CGFloat
   
-  public init(monthYearFormat: String, monthYearTextUppercase: Bool, monthRange: Int, dateSelectedImg: UIImage?, weekHeaderHeight: CGFloat, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, selectedDateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
+  public init(monthYearFormat: String, monthYearTextUppercase: Bool, monthRange: Int, dateSelectedImg: UIImage?, disableTouchOnPastDate: Bool, weekHeaderHeight: CGFloat, weekBgColor: String, weekFont: String, weekFontSize: CGFloat, weekTxtColor: String, dateTxtColor: String, selectedDateTxtColor: String, dateFont: String, dateFontSize: CGFloat, dateAlpha: CGFloat) {
     self.monthYearFormat = monthYearFormat
     self.monthYearTextUppercase = monthYearTextUppercase
     self.monthRange = monthRange
     self.dateSelectedImg = dateSelectedImg
+    self.disableTouchOnPastDate = disableTouchOnPastDate
     self.weekHeaderHeight = weekHeaderHeight
     self.weekBgColor = weekBgColor
     self.weekFont = weekFont
@@ -58,6 +60,7 @@ public var calendarSettings = ASSettings(
   monthYearTextUppercase: false,
   monthRange: 12,
   dateSelectedImg: nil,
+  disableTouchOnPastDate: false,
   weekHeaderHeight: 35,
   weekBgColor: "#fff",
   weekFont: "Helvetica Neue",
