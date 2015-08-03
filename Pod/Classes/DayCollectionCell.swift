@@ -43,6 +43,9 @@ class DayCollectionCell: UICollectionViewCell {
       if mark {
         markedView!.hidden = false
         label.textColor = UIColor(rgba: calendarSettings.selectedDateTxtColor)
+        
+        // Cached selected date
+        selectedDateCached = self.date
       } else {
         markedView!.hidden = true
       }

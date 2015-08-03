@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+// Global variable for save selected date
+var selectedDateCached: Date?
+
 public protocol CalendarViewDelegate: class {
    func didSelectDate(date: NSDate)
 }
@@ -49,7 +52,25 @@ public class CalendarView: UIView {
   
   var selectedDate: NSDate? {
     didSet {
-      collectionView.reloadData()
+      
+      if calendarSettings.disableTouchOnPastDate {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
+        let currentTime = dateFormatter.stringFromDate(NSDate())
+        let selectedTime = dateFormatter.stringFromDate(dateFormatter.dateFromString("\(selectedDate!.year)-\(selectedDate!.month)-\(selectedDate!.day)")!)
+        let compareResult = selectedTime.compare(currentTime)
+        
+        if compareResult == NSComparisonResult.OrderedDescending || compareResult == NSComparisonResult.OrderedSame {
+          collectionView.reloadData()
+        } else {
+          selectedDate = dateFormatter.dateFromString("\(selectedDateCached!.year)-\(selectedDateCached!.month)-\(selectedDateCached!.day)")
+        }
+        
+      } else {
+        collectionView.reloadData()
+      }
+      
       dispatch_async(dispatch_get_main_queue()){
         self.moveToSelectedDate(false)
         if self.delegate != nil {
