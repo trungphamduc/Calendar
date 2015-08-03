@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         monthYearTextUppercase: true,
         monthRange: 24,
         dateSelectedImg: nil,
+        disableTouchOnPastDate: true,
         weekHeaderHeight: 20,
         weekBgColor: "#93d1e6",
         weekFont: "Helvetica Neue",
